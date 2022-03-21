@@ -24,8 +24,6 @@ println(smallerDimension, largerDimension, widthLarger, heightLarger); //Verifyi
 //Note: single line IFs can be summarized to IF-ELSE or IF-ELSEIF-ELSE
 if ( widthLarger == true ) imageWidthRatio = float (largerDimension / largerDimension);
 if ( widthLarger == true ) imageHeightRatio = float (smallerDimension / largerDimension);
-if ( heightLarger == true) imageHeightRatio = float (largerDimension / largerDimension);
-if ( widthLarger == true ) imageWidthRatio = float (smallerDimension / largerDimension);
 println(imageWidthRatio, imageHeightRatio, smallerDimension / largerDimension, 400/400); //Verify variable values
 //Note: prinln() also verifies decimal places, compiler will truncate
 //Answers must be 1.0 and between 0 & 1 (decimal)
