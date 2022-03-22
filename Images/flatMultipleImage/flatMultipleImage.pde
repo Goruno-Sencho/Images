@@ -14,7 +14,7 @@ Pic2 = loadImage("ace.jpg"); //Dimensions: 1920 width, 1200 Height
 int pic1Width = 400;
 int pic1Height = 400;
 int pic2Width = 1920;
-int pic2Height =1200;
+int pic2Height =400;
 int largerPic1Dimension, smallerPic1Dimension, largerPic2Dimension, smallerPic2Dimension;
 float imageWidthRatioPic1=0.0, imageHeightRatioPic1=0.0, imageWidthRatioPic2=0.0, imageHeightRatioPic2=0.0;
 Boolean widthPic1Larger=true, heightPic1Larger=false, widthPic2Larger = true, heightPic2Larger = true;
@@ -59,7 +59,7 @@ rectWidthPic1 = displayWidth*1/2;
 rectHeightPic1 = displayHeight*1/2;
 rectXPic2 = displayWidth*1/8;
 rectYPic2 = displayHeight*1/2;
-rectWidthPic2 = displayWidth*6/8;
+rectWidthPic2 = displayWidth*3/4;
 rectHeightPic2 = displayHeight*1/2;
 //
 //Rect Layout & Image Printing on Canvas
