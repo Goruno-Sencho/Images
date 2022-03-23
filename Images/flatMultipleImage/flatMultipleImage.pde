@@ -50,14 +50,10 @@ if(widthPic2Larger == true); imageHeightRatioPic2 = float(largerPic2Dimension) /
 if(heightPic2Larger == true); imageWidthRatioPic2 = float(smallerPic2Dimension)/ float(largerPic2Dimension);
 if(heightPic2Larger == true); imageHeightRatioPic2 = float(largerPic2Dimension) / float(largerPic2Dimension);
 println(imageWidthRatioPic1, imageHeightRatioPic1, imageWidthRatioPic2, imageHeightRatioPic2  ); //Verifying Variable Details (Ratios)
-float pic1WidthAdjusted = pic1Width;
-float pic1HeightAdjusted = pic1Height;
-float pic2WidthAdjusted = pic2Width;
-float pic2HeightAdjusted = pic2Height;
 //
 // **CONT HERE
 //
-rectXPic1 = displayWidth*1/4 ;
+rectXPic1 = displayWidth*1/4;
 rectYPic1 = displayHeight*0;
 rectWidthPic1 = displayWidth*1/2;
 rectHeightPic1 = displayHeight*1/2;
@@ -66,8 +62,27 @@ rectYPic2 = displayHeight*1/2;
 rectWidthPic2 = displayWidth*3/4;
 rectHeightPic2 = displayHeight*1/2;
 //
-//Rect Layout & Image Printing on Canvas
-rect(rectXPic1, rectYPic1, rectWidthPic1, rectHeightPic1); //Image 1, landscape presentation
-rect(rectXPic2, rectYPic2, rectWidthPic2, rectHeightPic2); //Image 2, landscape presentation
-image(Pic1, rectXPic1, rectYPic1, rectWidthPic1, rectHeightPic1);
-image(Pic2, rectXPic2, rectYPic2, rectWidthPic2, rectHeightPic2);
+//Final Aspect Ratio Calculations
+float pic1WidthAdjusted, pic1HeightAdjusted , pic2WidthAdjusted, pic2HeightAdjusted;
+pic1WidthAdjusted = rectWidthPic1 * imageWidthRatioPic1;
+pic1HeightAdjusted = rectHeightPic1 * imageHeightRatioPic1;
+pic2WidthAdjusted = rectWidthPic2 * imageWidthRatioPic2;
+pic2HeightAdjusted = rectHeightPic2 * imageHeightRatioPic2;
+println(pic1Width, pic1Height, pic2Width, pic2Height  );
+println(pic1WidthAdjusted, pic1HeightAdjusted, pic2WidthAdjusted, pic2HeightAdjusted);
+//
+//
+//Rectangle Layout & Image Printing on Canvas
+color red=#FF0000;
+fill(red);
+//rect(rectXPic1, rectYPic1, rectWidthPic1, rectHeightPic1); //Image 1, landscape presentation
+rect(rectXPic2, rectYPic2, rectWidthPic2, rectHeightPic2); //Image 2, landscape presentation 
+// Image using Rect() Variables
+//image(pic1, rectXPic1, rectYPic1, rectWidthPic1, rectHeightPic1);
+//image(pic2, rectXPic2, rectYPic2, rectWidthPic2, rectHeightPic2);
+// Change the Rect() Variables to Aspect Ratio
+image(Pic1, rectXPic1, rectYPic1, pic1WidthAdjusted, pic1HeightAdjusted);
+println ("Image one looks good, maybe put some text underneath to fill in the space."); //Great Design Change for Aspect Ratio
+//image(pic2, rectXPic2, rectYPic2, pic2WidthAdjusted, pic2HeightAdjusted);
+//Center image in rect(), pic2, by changing the yRect() value
+image(Pic2, rectXPic2, rectYPic2+(rectYPic2*1/5), pic2WidthAdjusted, pic2HeightAdjusted);
