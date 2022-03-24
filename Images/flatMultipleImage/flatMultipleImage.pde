@@ -40,6 +40,7 @@ if( pic2Width > pic2Height ) { //ID Larger Dimension: Landscape and Square
 heightPic2Larger = true;
 } //End pic1larger dimension ID
 println(smallerPic1Dimension, largerPic1Dimension, smallerPic2Dimension, largerPic2Dimension); //Verifying Variable Details
+//Calculating Aspect Ratios
 //
 if(widthPic1Larger == true ); imageWidthRatioPic1 = float(largerPic1Dimension) / float(largerPic1Dimension);
 if(widthPic1Larger == true); imageHeightRatioPic1 = float (smallerPic1Dimension)/ float (largerPic1Dimension);
@@ -72,7 +73,7 @@ println(pic1Width, pic1Height, pic2Width, pic2Height  );
 println(pic1WidthAdjusted, pic1HeightAdjusted, pic2WidthAdjusted, pic2HeightAdjusted);
 //
 //
-//Rectangle Layout & Image Printing on Canvas
+  //Rectangle Layout & Image Printing on Canvas
 color red=#FF0000;
 fill(red);
 //rect(rectXPic1, rectYPic1, rectWidthPic1, rectHeightPic1); //Image 1, landscape presentation
